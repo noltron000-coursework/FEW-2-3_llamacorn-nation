@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import '../css/main.css';
 import ChoiceWidget from '../jsx/choice-widget.jsx';
 import Avatar from '../jsx/avatar.jsx';
-import * as fs from 'fs';
+import accessories from '../get-accessories.js'
+
 
 class App extends Component {
 	constructor(props) {
@@ -10,9 +11,10 @@ class App extends Component {
 		this.handleClick = this.handleClick.bind(this);
 	}
 
-	handleClick() {
-		const files = fs.readdirSync('../img/accessories/');
-		console.log(files);
+	getWidgets(items) {
+		for (let slot in items) {
+			<ChoiceWidget name={slot} />
+		}
 	}
 
 	render() {
