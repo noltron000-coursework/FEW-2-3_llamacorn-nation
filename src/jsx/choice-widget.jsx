@@ -19,3 +19,23 @@ class ChoiceWidget extends Component {
 }
 
 export default ChoiceWidget;
+
+
+// // Hats.js
+// export default [
+// 	a:1
+// ]
+
+// // faces.js
+// export default [
+// 	a: 1
+// ]
+
+// // index.js
+// import hats from 'hats'
+// import faces from 'faces'
+
+// export default {
+// 	hats,
+// 	faces
+// }
