@@ -1,25 +1,26 @@
+// import react package
 import React, { Component } from 'react';
-import Accessory from '../jsx/accessory.jsx';
-import '../css/placeholder.css';
+
+// import components
+import EquipSlot from '../jsx/equip-slot.jsx';
 
 class ChoiceWidget extends Component {
 	render() {
 		return (
-			<div>
+			<div id='widget'>
+				<h2>Here's your widgets:</h2>
 				{/* this will be a selection of accessories for this equip slot */}
-				<h3>Here's a selection of options:</h3>
-				<ul>
-					<Accessory />
-					<Accessory />
-					<Accessory />
-				</ul>
+				<form id='options'>
+					<EquipSlot />
+					<EquipSlot />
+					<EquipSlot />
+				</form>
 			</div>
 		);
 	}
 }
 
 export default ChoiceWidget;
-
 
 // // Hats.js
 // export default [
