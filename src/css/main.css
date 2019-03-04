@@ -29,3 +29,15 @@ code {
 	position: absolute;
 	top:0;
 }
+
+.hat {
+	width: 100px;
+	top: 70px;
+	left: 100px;
+}
+
+.eye {
+	width: 40px;
+	top: 185px;
+	left: 60px;
+}
