@@ -35,11 +35,15 @@ class ChoiceWidget extends Component {
 			slotList.push(slot)
 		}
 
-		console.log(slotList)
-
 		return (
 			<div>
-				{slotList.map((slot) => <EquipSlot key={slot} slot={slot} ItemData={this.state.ItemData} />)}
+				{slotList.map((slot) => {
+					return (<EquipSlot
+						key={slot}
+						slot={slot}
+						ItemData={this.state.ItemData}
+					/>)
+				})}
 			</div>
 		);
 	}
@@ -84,22 +88,3 @@ class ChoiceWidget extends Component {
 }
 
 export default ChoiceWidget;
-
-// // Hats.js
-// export default [
-// 	a:1
-// ]
-
-// // faces.js
-// export default [
-// 	a: 1
-// ]
-
-// // index.js
-// import hats from 'hats'
-// import faces from 'faces'
-
-// export default {
-// 	hats,
-// 	faces
-// }

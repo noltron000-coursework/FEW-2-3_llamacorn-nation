@@ -23,9 +23,6 @@ class App extends Component {
 	render() {
 		return (
 			<div>
-				<input type="checkbox" id="check3" /> Fish
-				<label htmlFor="check3">TEST</label>
-
 				<h1>Llamacorn Nation!</h1>
 				<div id='body'>
 					<Avatar />
