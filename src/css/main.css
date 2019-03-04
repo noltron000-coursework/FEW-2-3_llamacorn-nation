@@ -20,3 +20,12 @@ code {
 	align-items: top;
 	justify-content: space-around;
 }
+.container {
+	position: relative;
+}
+
+.avatar-item {
+	width: 400px;
+	position: absolute;
+	top:0;
+}
