@@ -16,8 +16,6 @@ class EquipSlot extends Component {
 
 	callSlot(item) {
 		this.setState({ choice: item })
-		console.log('Slot:' + this.props.slot)
-		console.log('item: ' + item)
 		this.props.setItem(this.props.slot, item)
 	}
 

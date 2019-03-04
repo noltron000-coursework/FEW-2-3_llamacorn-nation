@@ -29,11 +29,6 @@ class ChoiceWidget extends Component {
 		}
 	}
 
-	callWidget(slot, item) {
-		console.log('Widget Props:')
-		console.log(this.props)
-	}
-
 	renderEquipSlot() {
 		let slotList = []
 
@@ -48,8 +43,6 @@ class ChoiceWidget extends Component {
 						key={slot}
 						slot={slot}
 						ItemData={this.state.ItemData}
-						callWidget={this.props.callApp}
-					// callWidget={this.callWidget}
 					/>)
 				})}
 			</div>

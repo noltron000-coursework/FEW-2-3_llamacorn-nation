@@ -4,8 +4,6 @@ import React, { Component } from 'react';
 class Item extends Component {
 
 	sendToParent = () => {
-		console.log('Item Props:')
-		console.log(this.props)
 		this.props.callSlot(this.props.item);
 	}
 

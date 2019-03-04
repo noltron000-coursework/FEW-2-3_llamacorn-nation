@@ -18,7 +18,6 @@ class Avatar extends Component {
 }
 
 const mapStateToProps = (state) => {
-	console.log(state)
 	return { items: state.items }
 }
 

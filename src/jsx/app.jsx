@@ -14,9 +14,7 @@ import '../css/main.css';
 const store = createStore(reducers)
 
 class App extends Component {
-	callApp() {
-		console.log('got here')
-	}
+
 
 	render() {
 		return (
@@ -25,7 +23,7 @@ class App extends Component {
 					<h1>Llamacorn Nation!</h1>
 					<div id='body'>
 						<Avatar />
-						<Widget test='props???' callApp={this.callApp} />
+						<Widget />
 					</div>
 				</div>
 			</Provider>
