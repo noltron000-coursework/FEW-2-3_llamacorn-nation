@@ -24,8 +24,14 @@ class ChoiceWidget extends Component {
 					'llamacorn02.jpg',
 					'llamacorn03.png'
 				]
-			}
+			},
+			ChoiceData: {}
 		}
+	}
+
+	callWidget(slot, item) {
+		console.log('Widget Props:')
+		console.log(this.props)
 	}
 
 	renderEquipSlot() {
@@ -42,6 +48,8 @@ class ChoiceWidget extends Component {
 						key={slot}
 						slot={slot}
 						ItemData={this.state.ItemData}
+						callWidget={this.props.callApp}
+					// callWidget={this.callWidget}
 					/>)
 				})}
 			</div>

@@ -1,5 +1,8 @@
 // import react package
 import React, { Component } from 'react';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import reducers from '../reducers'
 
 // import components
 import Avatar from '../jsx/avatar.jsx';
@@ -8,27 +11,24 @@ import Widget from '../jsx/widget.jsx';
 // import other
 import '../css/main.css';
 
-class App extends Component {
-	// constructor(props) {
-	// 	super(props);
-	// 	this.handleClick = this.handleClick.bind(this);
-	// }
+const store = createStore(reducers)
 
-	// getWidgets(items) {
-	// 	for (let slot in items) {
-	// 		<ChoiceWidget name={slot} />
-	// 	}
-	// }
+class App extends Component {
+	callApp() {
+		console.log('got here')
+	}
 
 	render() {
 		return (
-			<div>
-				<h1>Llamacorn Nation!</h1>
-				<div id='body'>
-					<Avatar />
-					<Widget />
+			<Provider store={store}>
+				<div>
+					<h1>Llamacorn Nation!</h1>
+					<div id='body'>
+						<Avatar />
+						<Widget test='props???' callApp={this.callApp} />
+					</div>
 				</div>
-			</div>
+			</Provider>
 		);
 	}
 }
