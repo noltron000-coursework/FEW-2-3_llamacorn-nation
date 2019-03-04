@@ -1,10 +1,25 @@
 // import react package
 import React, { Component } from 'react';
+import { setItem } from '../actions/';
 
 // import components
 import Item from '../jsx/item.jsx';
+import { connect } from 'react-redux';
 
 class EquipSlot extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			choice: ''
+		}
+	}
+
+	callSlot(item) {
+		this.setState({ choice: item })
+		console.log('Slot:' + this.props.slot)
+		console.log('item: ' + item)
+		this.props.setItem(this.props.slot, item)
+	}
 
 	renderItemOption() {
 		let itemList = this.props.ItemData[this.props.slot]
@@ -17,6 +32,7 @@ class EquipSlot extends Component {
 						item={item}
 						slot={this.props.slot}
 						ItemData={this.props.ItemData}
+						callSlot={(item) => this.callSlot(item)}
 					/>)
 				})}
 			</div>
@@ -35,4 +51,14 @@ class EquipSlot extends Component {
 	}
 }
 
-export default EquipSlot;
+const mapStateToProps = (state) => {
+	return {}
+}
+
+const mapDispatchToProps = () => {
+	return {
+		setItem
+	}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps())(EquipSlot);
